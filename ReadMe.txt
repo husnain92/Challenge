@@ -4,7 +4,7 @@ Ans: Abstract class does not support multiple inheritance and on other hand Inte
 Abstract class can have static methods, main methods and constructor, well on other hand Interface can't have static  
 methods, main methods and constructor.
 
-2.Why is Java 7’s class inheritance flawed?
+2.Why is Java 7â€™s class inheritance flawed?
 
 Ans: I don't know.
 
@@ -37,13 +37,13 @@ logic if there is any chance that you may have to use the same layout/logic else
 some of the issues with  AsyncTask , and how to potentially solve them.
 
 Ans: Asynctask work fine until you rotate screen. Screen rotation annoyance for developers because when an app is  
-rotated, the entire Activity is destroyed and recreated. When the Activity is restarted, your AsyncTask’s reference to the  
+rotated, the entire Activity is destroyed and recreated. When the Activity is restarted, your AsyncTaskâ€™s reference to the  
 Activity is invalid, so onPostExecute() will have no effect on the new Activity. This can be confusing if you are  
 implicitly referencing the current Activity by having AsyncTask as an inner class of the Activity. The usual solution to  
 this problem is to hold onto a reference to AsyncTask that lasts between configuration changes, which updates the target  
 Activity as it restarts.
 
-Suppose you’ve got a search query that runs in an AsyncTask. The user may be able to change the search parameters while the  
+Suppose youâ€™ve got a search query that runs in an AsyncTask. The user may be able to change the search parameters while the  
 AsyncTask is running, so you call AsyncTask.cancel() and then fire up a new AsyncTask for the next query. This seems to  
 work until you check the logs and realize that your AsyncTasks all ran till completion, regardless of whether you called  
 cancel() or not. There are two simple solutions that cover most situations: Either check AsyncTask.isCancelled() on a  
